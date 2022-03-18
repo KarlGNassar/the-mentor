@@ -120,7 +120,7 @@ const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
   triggerElement: "#featureBanner",
   triggerHook: 0,
-  //   reverse: false,
+  // reverse: false,
 })
   .setTween(featuresTL)
   .addTo(controller);
