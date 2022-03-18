@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.register {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  label {
+    color: $blue;
+  }
+
+  h3 {
+    font-family: "Playfair Display";
+    color: $blue;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .form-btn {
+    display: inline-block;
+    height: 56px;
+    line-height: 56px;
+    font-size: 1rem;
+    padding: 0 32px;
+    text-decoration: none;
+    font-weight: 600;
+    color: $white;
+    background: $redOrange;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+  }
+}
+
+.footer {
+  background: $blue;
+}
