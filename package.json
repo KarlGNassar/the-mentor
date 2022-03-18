@@ -1,0 +1,14 @@
+{
+  "name": "the-mentor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KarlGNassar/the-mentor.git",
+  "author": "KarlGNassar <kgnassar01@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "node-sass --watch css/style.scss css/style.css"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
