@@ -134,14 +134,20 @@ const bannerScene = new ScrollMagic.Scene({
 const formTL = gsap.timeline();
 
 formTL
-  .from([formInputs, formPlaceholders, formButton], {
-    x: 200,
+  .from([formInputs, formButton], {
+    x: 400,
     opacity: 0,
     duration: 0.6,
     ease: "power3.out",
     stagger: {
       amount: 0.4,
     },
+  })
+  .from(formPlaceholders, {
+    delay: -0.4,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.inOut",
   })
   .from([formHeader, formP], {
     delay: -0.6,
