@@ -21,6 +21,12 @@ const featuresContentButton = document.querySelector(
 );
 const featuresList = document.querySelectorAll(".features-list li");
 
+const formHeader = document.querySelector(".register-content h3");
+const formP = document.querySelector(".register-content p");
+const formPlaceholders = document.querySelectorAll(".placehold");
+const formInputs = document.querySelectorAll(".form-control");
+const formButton = document.querySelector(".register-btn");
+
 const bannerTL = gsap.timeline();
 
 bannerTL
@@ -117,10 +123,42 @@ featuresTL
 
 const controller = new ScrollMagic.Controller();
 
-const scene = new ScrollMagic.Scene({
+const bannerScene = new ScrollMagic.Scene({
   triggerElement: "#featureBanner",
   triggerHook: 0,
   // reverse: false,
 })
   .setTween(featuresTL)
   .addTo(controller);
+
+const formTL = gsap.timeline();
+
+formTL
+  .from([formInputs, formPlaceholders, formButton], {
+    x: 200,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: {
+      amount: 0.4,
+    },
+  })
+  .from([formHeader, formP], {
+    delay: -0.6,
+    opacity: 0,
+    x: -100,
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: {
+      amount: 0.2,
+    },
+  });
+
+const formController = new ScrollMagic.Controller();
+const formScene = new ScrollMagic.Scene({
+  triggerElement: "#serviceBtn",
+  triggerHook: 0,
+  reverse: false,
+})
+  .setTween(formTL)
+  .addTo(formController);

@@ -1,38 +1,114 @@
 @import "../variables.scss";
 
 .register {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
 
-  label {
-    color: $blue;
-  }
+  .register-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-  h3 {
-    font-family: "Playfair Display";
-    color: $blue;
-    font-size: 2.6rem;
-    text-align: center;
-  }
+    .register-content {
+      width: 33%;
+      @media (max-width: $widescreen) {
+        width: 40%;
+      }
+      h3 {
+        font-family: "Playfair Display";
+        color: $blue;
+        font-size: 2.6rem;
+        line-height: 3.4rem;
+        margin: 0 0 40px;
+      }
+      p {
+        line-height: 1.8rem;
+        font-weight: 300;
+        color: $blue;
+        margin-bottom: 88px;
+        @media (max-width: $widescreen) {
+          padding-right: 60px;
+        }
+      }
+      .btn-row {
+        a {
+          color: $blue;
+          text-decoration: none;
+          font-weight: 600;
+          img {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
 
-  .form-btn {
-    display: inline-block;
-    height: 56px;
-    line-height: 56px;
-    font-size: 1rem;
-    padding: 0 32px;
-    text-decoration: none;
-    font-weight: 600;
-    color: $white;
-    background: $redOrange;
-    border-radius: 100px;
-    outline: none;
-    border: none;
+    .register-form-container {
+      width: 50%;
+      display: flex;
+
+      .register-form {
+        width: 80%;
+
+        .form-group {
+          position: relative;
+
+          .form-control {
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid $blue;
+            border-radius: 0px;
+            box-shadow: none;
+
+            &:focus {
+              border: 2px solid $blue;
+            }
+
+            &:focus + .placehold {
+              top: -10px;
+              color: $blue;
+              background-color: #fff;
+            }
+
+            &:not(:placeholder-shown) + .placehold {
+              top: -10px;
+              color: $blue;
+              background-color: #fff;
+            }
+          }
+
+          .placehold {
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            font-size: 14px;
+            padding: 0 5px;
+            transition: 0.3s;
+            pointer-events: none;
+
+            .lift {
+              top: -10px;
+              color: $blue;
+              background-color: #fff;
+            }
+          }
+        }
+
+        .register-btn {
+          height: 56px;
+          margin-top: 20px;
+          padding: 0 30px;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          color: $white;
+          background: $redOrange;
+          border-radius: 100px;
+        }
+      }
+    }
   }
 }
 
 .footer {
-  background: $blue;
+  background-color: $blue;
 }

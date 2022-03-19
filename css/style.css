@@ -641,8 +641,7 @@ body {
     padding: 0 16px; }
 
 .features {
-  margin-top: 20vh;
-  margin-bottom: 10vh; }
+  margin-top: 20vh; }
   .features .features-inner {
     display: flex;
     justify-content: space-between;
@@ -744,30 +743,82 @@ body {
     padding: 0 16px; }
 
 .register {
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-bottom: 50px; }
-  .register label {
-    color: #233567; }
-  .register h3 {
-    font-family: "Playfair Display";
-    color: #233567;
-    font-size: 2.6rem;
-    text-align: center; }
-  .register .form-btn {
-    display: inline-block;
-    height: 56px;
-    line-height: 56px;
-    font-size: 1rem;
-    padding: 0 32px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #ffffff;
-    background: #d57868;
-    border-radius: 100px;
-    outline: none;
-    border: none; }
+  margin-top: 20vh;
+  margin-bottom: 10vh; }
+  .register .register-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .register .register-inner .register-content {
+      width: 33%; }
+      @media (max-width: 1440px) {
+        .register .register-inner .register-content {
+          width: 40%; } }
+      .register .register-inner .register-content h3 {
+        font-family: "Playfair Display";
+        color: #233567;
+        font-size: 2.6rem;
+        line-height: 3.4rem;
+        margin: 0 0 40px; }
+      .register .register-inner .register-content p {
+        line-height: 1.8rem;
+        font-weight: 300;
+        color: #233567;
+        margin-bottom: 88px; }
+        @media (max-width: 1440px) {
+          .register .register-inner .register-content p {
+            padding-right: 60px; } }
+      .register .register-inner .register-content .btn-row a {
+        color: #233567;
+        text-decoration: none;
+        font-weight: 600; }
+        .register .register-inner .register-content .btn-row a img {
+          margin-left: 16px; }
+    .register .register-inner .register-form-container {
+      width: 50%;
+      display: flex; }
+      .register .register-inner .register-form-container .register-form {
+        width: 80%; }
+        .register .register-inner .register-form-container .register-form .form-group {
+          position: relative; }
+          .register .register-inner .register-form-container .register-form .form-group .form-control {
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid #233567;
+            border-radius: 0px;
+            box-shadow: none; }
+            .register .register-inner .register-form-container .register-form .form-group .form-control:focus {
+              border: 2px solid #233567; }
+            .register .register-inner .register-form-container .register-form .form-group .form-control:focus + .placehold {
+              top: -10px;
+              color: #233567;
+              background-color: #fff; }
+            .register .register-inner .register-form-container .register-form .form-group .form-control:not(:placeholder-shown) + .placehold {
+              top: -10px;
+              color: #233567;
+              background-color: #fff; }
+          .register .register-inner .register-form-container .register-form .form-group .placehold {
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            font-size: 14px;
+            padding: 0 5px;
+            transition: 0.3s;
+            pointer-events: none; }
+            .register .register-inner .register-form-container .register-form .form-group .placehold .lift {
+              top: -10px;
+              color: #233567;
+              background-color: #fff; }
+        .register .register-inner .register-form-container .register-form .register-btn {
+          height: 56px;
+          margin-top: 20px;
+          padding: 0 30px;
+          border: none;
+          outline: none;
+          font-weight: 600;
+          color: #ffffff;
+          background: #d57868;
+          border-radius: 100px; }
 
 .footer {
-  background: #233567; }
+  background-color: #233567; }
